@@ -43,7 +43,7 @@
       };
 
       if (window.location.hash) {
-        R.accessToken(window.location.hash);
+        R.accessToken(window.location.hash.slice(1));
       }
 
       R.ready(function() {
