@@ -41,6 +41,17 @@
         iframe.parentNode.removeChild(iframe);
         iframe = null;
       };
+
+      if (window.location.hash) {
+        R.accessToken(window.location.hash);
+      }
+
+      R.ready(function() {
+        R.on('change:authenticated', function() {
+          var user = R.currentUser();
+          sendObjectMessage({'selector': 'onAuthenticated', 'data': user});
+        });
+      });
     </script>
   </head>
   <body>
