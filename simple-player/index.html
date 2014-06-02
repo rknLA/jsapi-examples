@@ -34,6 +34,7 @@
     <script type="text/javascript">
       var sendObjectMessage = function(parameters) {
         var iframe = document.createElement('iframe');
+        iframe.setAttribute('class', 'hidden');
         iframe.setAttribute('src', 'rdiojsapi:' + JSON.stringify(parameters));
         
         document.documentElement.appendChild(iframe);
@@ -43,7 +44,6 @@
     </script>
   </head>
   <body>
-    <iframe class="ios-bridge"></iframe>
     <div class="header">
       <div class="section">
         <img class="icon">
