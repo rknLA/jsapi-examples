@@ -49,12 +49,12 @@
       R.ready(function() {
         R.on('change:authenticated', function() {
           var user = R.currentUser.attributes;
-          sendObjectMessage({'selector': 'onAuthenticated', 'data': user});
+          sendObjectMessage({'selector': 'onAuthenticated:', 'data': user});
         });
 
         if (R.authenticated()) {
           var user = R.currentUser.attributes;
-          sendObjectMessage({'selector': 'onAuthenticated', 'data': user});
+          sendObjectMessage({'selector': 'onAuthenticated:', 'data': user});
         }
 
         R.player.on('change:playState', function() {
