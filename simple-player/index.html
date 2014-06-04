@@ -53,7 +53,7 @@
         });
 
         if (R.authenticated()) {
-          var user = R.currentUser();
+          var user = R.currentUser.attributes;
           sendObjectMessage({'selector': 'onAuthenticated', 'data': user});
         }
 
