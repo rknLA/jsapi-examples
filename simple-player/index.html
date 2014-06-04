@@ -59,7 +59,7 @@
 
         R.player.on('change:playState', function() {
           var track = R.player.playingTrack();
-          sendObjectMessage({'selector': 'playstateChange', 'data': {'playState': R.player.playState(), 'track': track});
+          sendObjectMessage({'selector': 'playstateChange', 'data': {'playState': R.player.playState(), 'track': track}});
         });
       });
 
