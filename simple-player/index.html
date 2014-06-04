@@ -52,6 +52,11 @@
           sendObjectMessage({'selector': 'onAuthenticated', 'data': user});
         });
 
+        if (R.authenticated()) {
+          var user = R.currentUser();
+          sendObjectMessage({'selector': 'onAuthenticated', 'data': user});
+        }
+
         R.player.on('change:playState', function() {
           var track = R.player.playingTrack();
           sendObjectMessage({'selector': 'playstateChange', 'data': {'playState': R.player.playState(), 'track': track});
